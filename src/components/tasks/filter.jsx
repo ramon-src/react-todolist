@@ -16,7 +16,7 @@ const Filter = (props) => (
                         autoComplete="off"
                         value={props.filters.text} 
                         onChange={(e) => {
-                            props.dispatch(setTextFilter(e.target.value));
+                            props.setFilter(e.target.value);
                         }}
                     />
                     <select
@@ -39,10 +39,10 @@ const Filter = (props) => (
     </div>
 )
 
-const ConnectedFilter = (state) => {
-    return {
-        filters: state.filters
-    }
-}
+// const ConnectedFilter = (state) => {
+//     return {
+//         filters: state.filters
+//     }
+// }
 
-export default connect(ConnectedFilter)(Filter)
+export default Filter //connect(ConnectedFilter)(Filter)

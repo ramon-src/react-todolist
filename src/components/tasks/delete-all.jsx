@@ -14,4 +14,4 @@ const Deleteall = ({ dispatch }) => (
     </div>
 )
 
-export default connect()(Deleteall)
+export default Deleteall //connect()(Deleteall)
